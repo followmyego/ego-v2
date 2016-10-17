@@ -33,15 +33,14 @@ public class UserProfileFragment extends DemoFragmentBase {
     TextView tvStatus;
     EditText etStatus;
 
+    TextView tvLivesInHeader;
+    TextView tvWorksAtHeader;
     TextView tvAboutHeader;
     TextView tvAgeHeader;
-    TextView tvLivesInHeader;
+    TextView tvLivesIn;
+    TextView tvWorksAt;
     TextView tvAbout;
     TextView tvAge;
-    TextView tvLivesIn;
-    TextView tvWorksAtHeader;
-    TextView tvWorksAt;
-
 
 
 

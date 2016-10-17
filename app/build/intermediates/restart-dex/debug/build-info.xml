@@ -5,32 +5,33 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="33419086117293"
+    timestamp="37401915432500"
     token="-5274466181831347281"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="9449" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="1037" />
     <task
         name="verifier"
-        duration="0" />
+        duration="86" />
+
+    <artifact
+        location="/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="32717599387367"
+        timestamp="37401915432500"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="33419086117293"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

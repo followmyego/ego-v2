@@ -2722,7 +2722,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int ToolbarLogoHolder=0x7f0c0083;
-        public static final int about_header=0x7f0c00fc;
+        public static final int about_header=0x7f0c00fe;
         public static final int action0=0x7f0c00e6;
         public static final int action_bar=0x7f0c0071;
         public static final int action_bar_activity_content=0x7f0c0000;
@@ -2742,8 +2742,8 @@ containing a value of this type.
         public static final int add=0x7f0c0024;
         public static final int adjust_height=0x7f0c002e;
         public static final int adjust_width=0x7f0c002f;
-        public static final int age=0x7f0c00fe;
-        public static final int age_header=0x7f0c00fd;
+        public static final int age=0x7f0c0100;
+        public static final int age_header=0x7f0c00ff;
         public static final int alertTitle=0x7f0c005f;
         public static final int always=0x7f0c0033;
         public static final int appAnalytics_editText_description=0x7f0c00b4;
@@ -2751,15 +2751,15 @@ containing a value of this type.
         public static final int appAnalytics_linearLayout_textFields=0x7f0c00b3;
         public static final int auto=0x7f0c003b;
         public static final int automatic=0x7f0c004b;
-        public static final int badgeView=0x7f0c010d;
+        public static final int badgeView=0x7f0c010f;
         public static final int beginning=0x7f0c002b;
         public static final int bottom=0x7f0c0040;
-        public static final int bottomOverlayView=0x7f0c010a;
-        public static final int bottomPictureOverlay=0x7f0c010b;
+        public static final int bottomOverlayView=0x7f0c010c;
+        public static final int bottomPictureOverlay=0x7f0c010d;
         public static final int box_count=0x7f0c0045;
         public static final int button=0x7f0c0046;
         public static final int buttonPanel=0x7f0c005a;
-        public static final int buttonTest=0x7f0c0103;
+        public static final int buttonTest=0x7f0c0105;
         public static final int button_insert_sample_data=0x7f0c00d3;
         public static final int button_remove_sample_data=0x7f0c00d4;
         public static final int button_signout=0x7f0c0090;
@@ -2836,7 +2836,7 @@ containing a value of this type.
         public static final int expanded_menu=0x7f0c0067;
         public static final int fb_login_button=0x7f0c0094;
         public static final int finishButton=0x7f0c00f7;
-        public static final int first_name=0x7f0c00f9;
+        public static final int first_name=0x7f0c00fa;
         public static final int home=0x7f0c0010;
         public static final int homeAsUp=0x7f0c001e;
         public static final int hybrid=0x7f0c0030;
@@ -2861,8 +2861,8 @@ containing a value of this type.
         public static final int list_item=0x7f0c0057;
         public static final int list_item_icon=0x7f0c00e0;
         public static final int list_item_title=0x7f0c00e1;
-        public static final int lives_in=0x7f0c0100;
-        public static final int lives_in_header=0x7f0c00ff;
+        public static final int lives_in=0x7f0c0102;
+        public static final int lives_in_header=0x7f0c0101;
         public static final int loginTexrView=0x7f0c0095;
         public static final int logoHolder=0x7f0c0092;
         public static final int main_content_layout=0x7f0c0081;
@@ -2871,7 +2871,7 @@ containing a value of this type.
         public static final int messenger_send_button=0x7f0c00e3;
         public static final int middle=0x7f0c002d;
         public static final int multiply=0x7f0c0025;
-        public static final int nameOverlay=0x7f0c010c;
+        public static final int nameOverlay=0x7f0c010e;
         public static final int nav_drawer=0x7f0c008c;
         public static final int nav_drawer_items=0x7f0c0091;
         public static final int never=0x7f0c0036;
@@ -2901,11 +2901,13 @@ containing a value of this type.
         public static final int page=0x7f0c0043;
         public static final int pager=0x7f0c008b;
         public static final int parentPanel=0x7f0c005c;
-        public static final int profilePicture=0x7f0c0107;
-        public static final int profilePictureBackground=0x7f0c0106;
-        public static final int profilePictureOverlay=0x7f0c0108;
-        public static final int profilePicture_Background=0x7f0c00f8;
+        public static final int profilePicture=0x7f0c0109;
+        public static final int profilePictureBackground=0x7f0c0108;
+        public static final int profilePictureOverlay=0x7f0c010a;
+        public static final int profilePicture_Background=0x7f0c00f9;
         public static final int profile_fragment_container=0x7f0c0086;
+        public static final int profile_header_section=0x7f0c00f8;
+        public static final int profile_status_section=0x7f0c00fb;
         public static final int progressBar=0x7f0c00b2;
         public static final int progress_bar=0x7f0c0099;
         public static final int progress_circular=0x7f0c0013;
@@ -2962,8 +2964,8 @@ containing a value of this type.
         public static final int textView_demoIdentityUserID=0x7f0c00d1;
         public static final int textView_demoIdentityUserIDLabel=0x7f0c00d0;
         public static final int textView_demoIdentityUserName=0x7f0c00cf;
-        public static final int text_demo_feature_description_heading=0x7f0c0105;
-        public static final int text_demo_feature_overview=0x7f0c0104;
+        public static final int text_demo_feature_description_heading=0x7f0c0107;
+        public static final int text_demo_feature_overview=0x7f0c0106;
         public static final int thumbsUp=0x7f0c00f6;
         public static final int time=0x7f0c00ec;
         public static final int title=0x7f0c0059;
@@ -2983,14 +2985,14 @@ containing a value of this type.
         public static final int user_files_context_menu_new_folder=0x7f0c0018;
         public static final int user_files_context_menu_upload=0x7f0c0019;
         public static final int user_info=0x7f0c008d;
-        public static final int user_status_et=0x7f0c00fa;
-        public static final int user_status_tv=0x7f0c00fb;
+        public static final int user_status_et=0x7f0c00fc;
+        public static final int user_status_tv=0x7f0c00fd;
         public static final int wide=0x7f0c003a;
         public static final int withText=0x7f0c0037;
-        public static final int works_at=0x7f0c0102;
-        public static final int works_at_header=0x7f0c0101;
+        public static final int works_at=0x7f0c0104;
+        public static final int works_at_header=0x7f0c0103;
         public static final int wrap_content=0x7f0c002a;
-        public static final int youOverlay=0x7f0c0109;
+        public static final int youOverlay=0x7f0c010b;
     }
     public static final class integer {
         public static final int abc_config_activityDefaultDur=0x7f0d0000;
