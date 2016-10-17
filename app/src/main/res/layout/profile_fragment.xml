@@ -90,6 +90,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/profile_about_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="30dp"
