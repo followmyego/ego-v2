@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    android:background="#2E2E2E">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_weight="1"
+        android:background="#2E2E2E">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#2E2E2E">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                >
+
+                <ImageView
+                    android:id="@+id/profilePicture_Background"
+                    android:layout_width="match_parent"
+                    android:layout_height="275dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="275dp"
+                    android:src="@drawable/profile_photo_shadow"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/first_name"
+                    android:textSize="60sp"
+                    android:textColor="#ffffff"
+                    tools:text="Roger"
+                    android:layout_margin="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_gravity="left|bottom" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:background="#2E2E2E"
+                android:layout_marginRight="80dp"
+                >
+
+                <EditText
+                    android:id="@+id/user_status_et"
+                    android:text="Hey if you want to hang out message me! I feel like chilling tonight with cool people!"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:theme="@style/MyEditTextTheme"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/user_status_tv"
+                    android:text="Hey if you want to hang out message me! I feel like chilling tonight with cool people!"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:background="#2E2E2E">
+
+                <TextView
+                    android:id="@+id/about_header"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:text="About"/>
+
+                <TextView
+                    android:id="@+id/age_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/about_header"
+                    android:textColor="#55C1AD"
+                    android:text="age"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/age_header"
+                    android:textColor="#888888"
+                    android:text="34 - 36"
+                    android:textSize="24sp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/lives_in_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/about_header"
+                    android:layout_toRightOf="@+id/age_header"
+                    android:textColor="#55C1AD"
+                    android:text="lives in"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/lives_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lives_in_header"
+                    android:layout_alignLeft="@+id/lives_in_header"
+                    android:textColor="#888888"
+                    android:text="Vancouver, BC"
+                    android:textSize="24sp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/works_at_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/age"
+                    android:textColor="#55C1AD"
+                    android:text="works at"
+                    android:textSize="18sp"
+                    android:layout_marginTop="40dp" />
+
+                <TextView
+                    android:id="@+id/works_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/works_at_header"
+                    android:textColor="#888888"
+                    android:text="Walmart, Vancouver"
+                    android:textSize="24sp"
+                    android:layout_marginTop="12dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonTest"
+                android:text="@string/fragment_demo_instruction_overview_header"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+                android:id="@+id/text_demo_feature_overview"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/text_demo_feature_description_heading"
+                android:text="@string/fragment_demo_instruction_description_header"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\Lucas\\Desktop\\Ego-aws-my-sample-app-android\\Ego\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Lucas\\Desktop\\Ego-aws-my-sample-app-android\\Ego\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Lucas\\Desktop\\Ego-aws-my-sample-app-android\\Ego\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\splash_icon.png",
+        "source": "C:\\Users\\Lucas\\Desktop\\Ego-aws-my-sample-app-android\\Ego\\app\\src\\main\\res\\mipmap-hdpi\\splash_icon.png"
+    }
+]
