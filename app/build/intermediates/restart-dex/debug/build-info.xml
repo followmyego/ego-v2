@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="21"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.1"
+    timestamp="33419086117293"
+    token="-5274466181831347281"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="0" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="0" />
+    <task
+        name="verifier"
+        duration="0" />
+
+    <build
+        timestamp="32717599387367"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="33419086117293"
+        verifier="COLD_SWAP_REQUESTED" />
+
+</instant-run>

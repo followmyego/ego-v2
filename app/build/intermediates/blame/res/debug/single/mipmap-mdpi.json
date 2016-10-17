@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/Users/Lucas/Desktop/ego-v2-master/Ego/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/res/merged/debug/mipmap-mdpi/splash_icon.png",
+        "source": "/Users/Lucas/Desktop/ego-v2-master/Ego/app/src/main/res/mipmap-mdpi/splash_icon.png"
+    }
+]
