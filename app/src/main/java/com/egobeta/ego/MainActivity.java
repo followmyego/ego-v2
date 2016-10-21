@@ -33,6 +33,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.amazonaws.mobile.AWSMobileClient;
@@ -50,6 +51,7 @@ import android.content.IntentFilter;
 import android.content.BroadcastReceiver;
 import android.support.v4.content.LocalBroadcastManager;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.egobeta.ego.navigation.NavigationDrawer;
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Toolbar toolbar;
 
     /** Our navigation drawer class for handling navigation drawer logic. */
-    private NavigationDrawer navigationDrawer;
+    NavigationDrawer navigationDrawer;
 
     /** The helper class used to toggle the left navigation drawer open and closed. */
     private ActionBarDrawerToggle drawerToggle;
@@ -91,8 +93,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static String facebookId;
     Fragment egoStream;
     LocationUpdater locationUpdater;
-    DynamoDBMapper mapper;
+    public DynamoDBMapper mapper;
     boolean isCreated = false;
+    ImageView egoLogo;
+
+    //Profile Toolbar header variables
+    RelativeLayout profile_toolbar_section;
+    ImageView xBackButton;
+    TextView profileName;
 
     /**
      * Initializes the Toolbar for use with the activity.
@@ -104,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar.setBackgroundColor(titleBarColor);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
+
 
         if (savedInstanceState != null) {
             // Some IDEs such as Android Studio complain about possible NPE without this check.
@@ -135,6 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void setupNavigationMenu(final Bundle savedInstanceState) {
         final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         final ListView drawerItems = (ListView) findViewById(R.id.nav_drawer_items);
+
 
         // Create the navigation drawer.
         navigationDrawer = new NavigationDrawer(this, toolbar, drawerLayout, drawerItems,
@@ -191,6 +201,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
+
         // Obtain a reference to the mobile client. It is created in the Application class,
         // but in case a custom Application class is not used, we initialize it here if necessary.
         AWSMobileClient.initializeMobileClientIfNecessary(this);
@@ -210,18 +223,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main);
 
+        egoLogo = (ImageView) findViewById(R.id.ego_logo_title);
+
+        profile_toolbar_section = (RelativeLayout) findViewById(R.id.profile_toolbar_section);
+        xBackButton = (ImageView) findViewById(R.id.x_back_button);
+        profileName = (TextView) findViewById(R.id.profile_name);
+
+        profile_toolbar_section.setVisibility(View.GONE);
+
         setupToolbar(savedInstanceState);
 
         setupNavigationMenu(savedInstanceState);
 
         setUpPageIndicator();
-
-
-
-
-
-
-
 
     }
 
@@ -249,6 +263,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
+        egoLogo = (ImageView) findViewById(R.id.ego_logo_title);
 
         if (!AWSMobileClient.defaultMobileClient().getIdentityManager().isUserSignedIn()) {
             // In the case that the activity is restarted by the OS after the application

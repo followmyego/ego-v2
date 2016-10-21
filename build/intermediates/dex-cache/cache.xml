@@ -178,7 +178,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="cf4d14ff3fdc97d48af90b96a0caa359dd540200">
+        sha1="e3102f96846b0fe85567423d928f0fb5a71851dc">
         <dex dex="/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b38458e043076d05807a229a1ed0ae82e835869d/classes.dex" />
     </item>
     <item
@@ -358,7 +358,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="3a7d5a06b2c2b80e18fc20c5dd1056783a9af1ad">
+        sha1="d93b7cb4bac45408f3d32fddde9c8b49fe98ba31">
         <dex dex="/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_48b8d9bb3fcce8a9eeffe60f4d853fa3022d0c33/classes.dex" />
     </item>
     <item

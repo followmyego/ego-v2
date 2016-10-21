@@ -1,7 +1,4 @@
-#Mon Oct 17 16:38:01 PDT 2016
-base.0=/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_48b8d9bb3fcce8a9eeffe60f4d853fa3022d0c33
-renamed.1=classes2.dex
+#Thu Oct 20 17:42:27 PDT 2016
+base.0=/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.1=/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b38458e043076d05807a229a1ed0ae82e835869d/classes.dex
-base.1=/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b38458e043076d05807a229a1ed0ae82e835869d
-file.0=/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_48b8d9bb3fcce8a9eeffe60f4d853fa3022d0c33/classes.dex
+file.0=/Users/Lucas/Desktop/ego-v2-master/Ego/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

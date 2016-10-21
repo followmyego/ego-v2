@@ -17,7 +17,9 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
@@ -69,6 +71,7 @@ public class EgoStream extends DemoFragmentBase implements SwipeRefreshLayout.On
     private static Context context;
     private static Activity activity;
     public static Bitmap image;
+    RelativeLayout profile_toolbar_section;
 
 
 
@@ -85,6 +88,15 @@ public class EgoStream extends DemoFragmentBase implements SwipeRefreshLayout.On
         progressBar.setVisibility(View.GONE);
         activity = getActivity();
 
+        // Display the home button on the toolbar that will open the navigation drawer.
+        AppCompatActivity containingActivity = (MainActivity) getActivity();
+        final ActionBar supportActionBar = containingActivity.getSupportActionBar();
+        supportActionBar.setDisplayHomeAsUpEnabled(true);
+        supportActionBar.setHomeButtonEnabled(true);
+        supportActionBar.setTitle("");
+
+
+
         // Inflate the layout for this fragment
         return v;
     }
@@ -92,6 +104,15 @@ public class EgoStream extends DemoFragmentBase implements SwipeRefreshLayout.On
     @Override
     public void onViewCreated(final View view, final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ImageView egoLogo = ((MainActivity) getActivity()).egoLogo;
+        profile_toolbar_section = ((MainActivity) getActivity()).profile_toolbar_section;
+
+
+        if ( egoLogo != null) {
+            egoLogo.setVisibility(View.VISIBLE);
+        }
+
+        current_page = 0; //in case someone left the application by clicking the back button
         context = getContext();
         typeface = Typeface.createFromAsset(context.getAssets(), "fonts/ChaletNewYorkNineteenEighty.ttf");
         facebookId = MainActivity.facebookId;
@@ -126,7 +147,9 @@ public class EgoStream extends DemoFragmentBase implements SwipeRefreshLayout.On
                 final UserItem userItem = adapter.getItem(position);
                 final AppCompatActivity activity = (AppCompatActivity) getActivity();
                 if (activity != null) {
-                    final Fragment fragment = UserProfileFragment.newInstance(userItem.getFacebookId(), userItem.getFirstName());
+                    Fragment fragment = UserProfileFragment.newInstance(userItem.getFacebookId(), userItem.getFirstName());
+
+
 
                     activity.getSupportFragmentManager()
                         .beginTransaction()
@@ -134,10 +157,15 @@ public class EgoStream extends DemoFragmentBase implements SwipeRefreshLayout.On
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit();
 
+                    ((MainActivity) getActivity()).navigationDrawer.hideMenuTogglebutton();
+                    profile_toolbar_section.setVisibility(View.VISIBLE);
+
+                    ((MainActivity) getActivity()).egoLogo.setVisibility(View.INVISIBLE);
+
                     // Set the title for the fragment.
                     final ActionBar actionBar = activity.getSupportActionBar();
                     if (actionBar != null) {
-                        actionBar.setTitle(" ");
+                        actionBar.setTitle(userItem.firstName);
                     }
                 }
             }

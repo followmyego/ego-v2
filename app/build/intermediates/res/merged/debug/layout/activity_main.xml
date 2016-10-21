@@ -23,29 +23,37 @@
             android:layout_height="70dp"
             android:padding="0dp"
             android:layout_margin="0dp"
-            >
-
-
-        </android.support.v7.widget.Toolbar>
+            />
 
         <RelativeLayout
+            android:id="@+id/profile_toolbar_section"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:id="@+id/ToolbarLogoHolder"
             android:layout_gravity="center_horizontal|top"
             android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            >
+            android:layout_toRightOf="@+id/onBoardingLayout"
+            android:layout_toEndOf="@+id/onBoardingLayout"
+            android:visibility="visible">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:id="@+id/ego_logo_title"
-                android:src="@drawable/signing_ego_logo"
-                android:scaleType="centerInside"
-                android:layout_centerInParent="true"
+                android:id="@+id/x_back_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/x_button_icon"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
                 />
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                tools:text="Lucas"
+                />
+
         </RelativeLayout>
 
 
@@ -99,6 +107,25 @@
                 android:layout_height="match_parent"
                 />
 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ToolbarLogoHolder"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/onBoardingLayout"
+            android:layout_toEndOf="@+id/onBoardingLayout">
+
+            <ImageView
+                android:id="@+id/ego_logo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@drawable/signing_ego_logo"
+                android:scaleType="centerInside"
+                android:layout_centerInParent="true"
+                />
         </RelativeLayout>
 
 

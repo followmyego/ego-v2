@@ -40,11 +40,13 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         android:name=".ego.Application"
+        android:screenOrientation="portrait"
         >
         <activity
             android:name=".ego.SplashActivity"
             android:label="@string/app_name"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

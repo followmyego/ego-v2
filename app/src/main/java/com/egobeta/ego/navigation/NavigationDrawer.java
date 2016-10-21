@@ -35,10 +35,12 @@ public class NavigationDrawer {
     private AppCompatActivity containingActivity;
 
     /** The helper class used to toggle the left navigation drawer open and closed. */
-    private ActionBarDrawerToggle drawerToggle;
+    public ActionBarDrawerToggle drawerToggle;
 
     /* The navigation drawer layout view control. */
-    private DrawerLayout drawerLayout;
+    public DrawerLayout drawerLayout;
+
+
     Fragment egoStream;
 
     /** The view group that will contain the navigation drawer menu items. */
@@ -47,6 +49,8 @@ public class NavigationDrawer {
 
     /** The id of the fragment container. */
     private int fragmentContainerId;
+
+    Toolbar toolbar;
 
     /**
      * Constructs the Navigation Drawer.
@@ -62,6 +66,7 @@ public class NavigationDrawer {
                             final int fragmentContainerId) {
         // Keep a reference to the activity containing this navigation drawer.
         this.containingActivity = activity;
+        this.toolbar = toolbar;
         this.drawerItems = drawerItemsContainer;
         adapter = new ArrayAdapter<DemoConfiguration.DemoFeature>(activity, R.layout.nav_drawer_item) {
             @Override
@@ -139,6 +144,58 @@ public class NavigationDrawer {
         // Switch to display the hamburger icon for the home button.
         drawerToggle.syncState();
     }
+
+    public void hideMenuTogglebutton(){
+        // Display the home button on the toolbar that will open the navigation drawer.
+        ActionBar supportActionBar = containingActivity.getSupportActionBar();
+        assert supportActionBar != null;
+        supportActionBar.setDisplayHomeAsUpEnabled(false);
+        supportActionBar.setHomeButtonEnabled(false);
+        supportActionBar.setTitle("");
+    }
+
+    public void showMenuTogglebutton(){
+//        // Display the home button on the toolbar that will open the navigation drawer.
+//        ActionBar supportActionBar = containingActivity.getSupportActionBar();
+//        assert supportActionBar != null;
+//        supportActionBar.setDisplayHomeAsUpEnabled(true);
+//        supportActionBar.setHomeButtonEnabled(true);
+//        supportActionBar.setTitle("");
+
+
+        // Create the navigation drawer toggle helper.
+        drawerToggle = new ActionBarDrawerToggle(containingActivity, drawerLayout, toolbar,
+                no_name, no_name) {
+
+            @Override
+            public void syncState() {
+                super.syncState();
+                updateUserName(containingActivity);
+                updateUserImage(containingActivity);
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                updateUserName(containingActivity);
+                updateUserImage(containingActivity);
+            }
+        };
+
+        // Set the listener to allow a swipe from the screen edge to bring up the navigation drawer.
+        drawerLayout.setDrawerListener(drawerToggle);
+
+        // Display the home button on the toolbar that will open the navigation drawer.
+        final ActionBar supportActionBar = containingActivity.getSupportActionBar();
+        supportActionBar.setDisplayHomeAsUpEnabled(true);
+        supportActionBar.setHomeButtonEnabled(true);
+        supportActionBar.setTitle("");
+
+        // Switch to display the hamburger icon for the home button.
+        drawerToggle.syncState();
+    }
+
+
 
     private void updateUserName(final AppCompatActivity activity) {
         final IdentityManager identityManager =

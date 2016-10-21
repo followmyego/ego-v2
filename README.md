@@ -1,2 +1,2 @@
 # ego-v2
-ego project with was backend for android
+ego project with aws backend for android
